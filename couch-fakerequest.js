@@ -4,10 +4,10 @@
 
 var noop = function () {};
 
-send   = send   || noop,
-start  = start  || noop,
-getRow = getRow || noop,
-log    = log    || noop;
+send   = typeof send   !== 'undefined' ? send:   noop,
+start  = typeof start  !== 'undefined' ? start:  noop,
+getRow = typeof getRow !== 'undefined' ? getRow: noop,
+log    = typeof log    !== 'undefined' ? log:    noop;
 
 
 /**
